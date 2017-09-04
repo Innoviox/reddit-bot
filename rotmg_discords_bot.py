@@ -5,7 +5,7 @@ import re
 import os
 
 def bot_login():
-	print_output("Loggin in...")
+	print_output("Logging in...")
 	r = praw.Reddit(username = rotmg_discords_bot_config.username,
 			password = rotmg_discords_bot_config.password,
 			client_id = rotmg_discords_bot_config.client_id,			# Messy stuff at the beginning, r = reddit
