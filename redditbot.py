@@ -44,7 +44,25 @@ weekly_question_thread_link = "https://www.reddit.com/r/RotMG/6vmfh3" # Posted A
 
 
 
-
+# Changelog: 
+# 
+# v0.1 - Bot is able to reply to comments and posts. (8/16)
+# v0.2 - Bot is able to reply to posts based on their title and content (8/17)
+# v0.3 - Fixed bug regarding fame train section, added Guild Recruitment (8/17)
+# v0.4 - Improved syntax for posts on the developer end, no change on user end (8/18)
+# v0.5 - Bot no longer replies to the same post multiple times (8/18)
+# v0.6 - Whitelist of users implemented (8/18)
+# v0.7 - Whitlist actually works now (8/18)
+# v0.8 - Added a significant number of cases, including temporary and miscellaneous (8/18)
+# v0.9 - Bot sends a modmail when automod posts the weekly question thread (8/19)
+# v1.0 - Enough cases have been added to declare the bot complete; there are no know bugs. (8/20)
+# v1.1 - Added a !discords command to list all discords (8/27)
+# v1.2 (CURRENT) - All terminal output is now also written to a text file (9/1)
+# 
+# PLANNED: 
+# 
+# v1.3 - !help command to show all commands, including their aliases, and some info about the bot.
+# v2.0 - Bot is able to reply to common comments on the weekly question Thread
 
 
 
