@@ -6,7 +6,7 @@ import datetime
 import os
 
 def bot_login():
-	print_output("\nLoggin in...")
+	print_output("\nLogging in...")
 	r = praw.Reddit(username = config.username,
 			password = config.password,
 			client_id = config.client_id,			# Messy stuff at the beginning
