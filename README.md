@@ -7,3 +7,5 @@ Everything in the code should be commented fairly well. If it isn't please leave
 In the beginning of redditbot.py where it references config.py, that is a separate file that I will not be uploading. Literally all it contains is my secret, client_id and username. I just have it separately so I can share redditbot.py and not have to worry about giving away the keys to my account.
 
 redditbot.py won't comment on any post made by someone in the user_whitelist, but will still reply to comments with a command in them.
+
+Changelogs can be found near the top of each bot's code.
