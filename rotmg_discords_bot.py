@@ -37,7 +37,8 @@ def main(r, comments_replied_to):
 		print_output(comment.body + "\n \n https://www.reddit.com/r/RotMG/comments/%s//%s \n---- \n " %(comment.submission, comment.id))
 	
 		words = comment.body.split(" ")
-		try:
+		#was try/except:pass loop, bad style in my opinion
+		if "!tag" in words: 
 			index = words.index("!tag")
 			if(index < 0):
 				command = words[index + 1]
@@ -48,8 +49,7 @@ def main(r, comments_replied_to):
 
 				
 				print_output("I've added the tag %s to the post %s" %(tag, comment.submission))
-		except:
-			pass
+
 
 
 
@@ -59,8 +59,8 @@ def main(r, comments_replied_to):
 					"realm provides the best fpm (fame per minute). Their current location can be found in the #click-here-for-train channel of their discord: " +
 					"https://discord.gg/sXRRQth.\n \n" +
 					"--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +
-					" and this action was performed automatically) ^| ^(Version: " + version + ") ^| ^(Reply to leave feedback)")
-
+					" and this action was performed automatically) ^| ^("Version: " + version + ") ^| ^(Reply to leave feedback)")
+       											     #python >3.6: f"Version: {version}"
 			with open ("comments_replied_to.txt", "a") as f: 			# a = writing the file
 				f.write(comment.id + "\n")
 			count = count + 1
