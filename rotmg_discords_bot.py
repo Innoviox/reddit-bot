@@ -52,35 +52,29 @@ def main(r, comments_replied_to):
 			pass
 
 
-
-		matcher = re.search("(?i)(!train|!fametrain)",comment.body)
-		if(matcher != None and comment.id not in comments_replied_to):
-			comment.reply("The Fame Train, previously located on the server EUN2, now moves around to whichever " + 
+		matches = [["(?i)(!train|!fametrain)", 
+			    "The Fame Train, previously located on the server EUN2, now moves around to whichever " + 
 					"realm provides the best fpm (fame per minute). Their current location can be found in the #click-here-for-train channel of their discord: " +
 					"https://discord.gg/sXRRQth.\n \n" +
 					"--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +
-					" and this action was performed automatically) ^| ^(Version: " + version + ") ^| ^(Reply to leave feedback)")
-
-			with open ("comments_replied_to.txt", "a") as f: 			# a = writing the file
-				f.write(comment.id + "\n")
-			count = count + 1
-			print_output("--------------- \n \nFame Train discord comment has been left.\n ---------------")
-
-
-
-
-
-		matcher = re.search("(?i)(!LH|!Lost Halls|!lost halls)",comment.body)
-		if(matcher != None and comment.id not in comments_replied_to):
-			comment.reply("The public Lost Halls discord pops LH for as many people as they can get, to ensure its completion." +
-			" \n \n Their discord can be found here: https://discord.gg/yWASJqd \n \n" +
+					" and this action was performed automatically) ^| ^(Version: " + version + ") ^| ^(Reply to leave feedback)"
+			    "--------------- \n \nFame Train discord comment has been left.\n ---------------"],
+			   ["(?i)(!LH|!Lost Halls|!lost halls)",
+			    "The public Lost Halls discord pops LH for as many people as they can get, to ensure its completion." +
+					" \n \n Their discord can be found here: https://discord.gg/yWASJqd \n \n" +
 					"--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +
-					" and this action was performed automatically) ^| ^(Version: " + version + ") ^| ^(Reply to leave feedback)")
+					" and this action was performed automatically) ^| ^(Version: " + version + ") ^| ^(Reply to leave feedback)",
+			    "Lost Halls discord comment has been left."]]
+			    
+		for match, reply, output in matches:
+			matcher = re.search(match,comment.body)
+			if(matcher != None and comment.id not in comments_replied_to):
+				comment.reply(reply)
+				with open ("comments_replied_to.txt", "a") as f: 			# a = writing the file
+					f.write(comment.id + "\n")
+				count = count + 1
+				print_output(output)
 
-			with open ("comments_replied_to.txt", "a") as f:
-				f.write(comment.id + "\n")
-			count = count + 1
-			print_output("Lost Halls discord comment has been left.")
 
 
 
