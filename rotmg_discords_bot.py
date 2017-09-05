@@ -64,7 +64,18 @@ def main(r, comments_replied_to):
 					" \n \n Their discord can be found here: https://discord.gg/yWASJqd \n \n" +
 					"--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +
 					" and this action was performed automatically) ^| ^(Version: " + version + ") ^| ^(Reply to leave feedback)",
-			    "Lost Halls discord comment has been left."]]
+			    "Lost Halls discord comment has been left."],
+			  "(?i)(!pitch|PitchOTMG|!POTMG)",
+			  "Pitch is a shatters subscription system where you pay two life a week to gain access to shatters bought with that life." +
+				"\n \n The Pitch discord can be found here: https://discord.gg/s5c8rKw \n \n" +
+				"--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +
+				" and this action was performed automatically) ^| ^(Version: " + version + ") ^| ^(Reply to leave feedback)",
+			  "Pitch discord comment has been left."],
+		["(?i)(!r/rotmg|!rotmg|!r-rotmg)",
+		 "The official r/rotmg discord can be found here: https://discord.gg/rotmg \n \n" +
+				"--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +
+				" and this action was performed automatically) ^| ^(Version: " + version + ") ^) ^| ^(Reply to leave feedback)",
+		 "r/rotmg discord comment has been left."]]
 			    
 		for match, reply, output in matches:
 			matcher = re.search(match,comment.body)
@@ -74,41 +85,6 @@ def main(r, comments_replied_to):
 					f.write(comment.id + "\n")
 				count = count + 1
 				print_output(output)
-
-
-
-
-
-
-
-
-		matcher = re.search("(?i)(!pitch|PitchOTMG|!POTMG)",comment.body)
-		if(matcher != None and comment.id not in comments_replied_to):
-			comment.reply("Pitch is a shatters subscription system where you pay two life a week to gain access to shatters bought with that life." +
-				"\n \n The Pitch discord can be found here: https://discord.gg/s5c8rKw \n \n" +
-				"--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +
-				" and this action was performed automatically) ^| ^(Version: " + version + ") ^| ^(Reply to leave feedback)")
-
-			with open ("comments_replied_to.txt", "a") as f:
-				f.write(comment.id + "\n")
-			count = count + 1
-			print_output("Pitch discord comment has been left.")
-		
-
-
-
-
-
-		matcher = re.search("(?i)(!r/rotmg|!rotmg|!r-rotmg)",comment.body)
-		if(matcher != None and comment.id not in comments_replied_to):
-			comment.reply("The official r/rotmg discord can be found here: https://discord.gg/rotmg \n \n" +
-				"--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +
-				" and this action was performed automatically) ^| ^(Version: " + version + ") ^) ^| ^(Reply to leave feedback)")
-
-			with open ("comments_replied_to.txt", "a") as f:
-				f.write(comment.id + "\n")
-			count = count + 1
-			print_output("r/rotmg discord comment has been left.")
 
 
 
