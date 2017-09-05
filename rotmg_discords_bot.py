@@ -99,141 +99,15 @@ def main(r, comments_replied_to):
 			except:
 				pass
 
-	 
-
-			matcher = re.search("(?i)(!train|!fametrain)",comment.body)
-			if(matcher != None and comment.id not in comments_replied_to):
-				comment.reply("The Fame Train, previously located on the server EUN2, now moves around to whichever realm " + 
-						"provides the best fpm (fame per minute). Their current location can be found in the #click-here-for-train channel of their discord: "+
-						"https://discord.gg/sXRRQth.\n \n" +
-						"--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +
-						" and this action was performed automatically) ^| ^(Version: " + version + ") ^| ^(Reply to leave feedback)")
-
-				with open ("comments_replied_to.txt", "a") as f: 			# a = writing the file
-					f.write(comment.id + "\n")
-				count = count + 1
-				print_output("--------------- \n \nFame Train discord comment has been left.\n ---------------")
-
-
-
-
-
-			matcher = re.search("(?i)(!LH|!Lost Halls|!lost halls)",comment.body)
-			if(matcher != None and comment.id not in comments_replied_to):
-				comment.reply("The public Lost Halls discord pops LH for as many people as they can get, to ensure its completion." +
-				" \n \n Their discord can be found here: https://discord.gg/yWASJqd \n \n" +
-						"--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +
-						" and this action was performed automatically) ^| ^(Version: " + version + ") ^| ^(Reply to leave feedback)")
-
-				with open ("comments_replied_to.txt", "a") as f:
-					f.write(comment.id + "\n")
-				count = count + 1
-				print_output("Lost Halls discord comment has been left.")
-
-
-
-
-
-
-
-			matcher = re.search("(?i)(!pitch|!PitchOTMG|!POTMG)",comment.body)
-			if(matcher != None and comment.id not in comments_replied_to):
-				comment.reply("Pitch is a shatters subscription system where you pay two life a week to gain access to shatters bought with that life." +
-					"\n \n The Pitch discord can be found here: https://discord.gg/s5c8rKw \n \n" +
-					"--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +
-					" and this action was performed automatically) ^| ^(Version: " + version + ") ^| ^(Reply to leave feedback)")
-
-				with open ("comments_replied_to.txt", "a") as f:
-					f.write(comment.id + "\n")
-				count = count + 1
-				print_output("Pitch discord comment has been left.")
-			
-
-
-
-
-
-			matcher = re.search("(?i)(!r/rotmg|!rotmg|!r-rotmg)",comment.body)
-			if(matcher != None and comment.id not in comments_replied_to):
-				comment.reply("The official r/rotmg discord can be found here: https://discord.gg/rotmg \n \n" +
-					"--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +
-					" and this action was performed automatically) ^| ^(Version: " + version + ") ^) ^| ^(Reply to leave feedback)")
-
-				with open ("comments_replied_to.txt", "a") as f:
-					f.write(comment.id + "\n")
-				count = count + 1
-				print_output("r/rotmg discord comment has been left.")
-
-
-
-
-
-
-			matcher = re.search("(?i)(!support|!supportlink|!Deca Support)",comment.body)
-			if(matcher != None and comment.id not in comments_replied_to):
-				comment.reply("Deca support - used for unban requests, hacker reports, and a host of other things - can be found here: "+
-					"http://decagames.desk.com/customer/portal/emails/new \n \n" +
-					"--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +
-					" and this action was performed automatically) ^| ^(Version: " + version + " ^| ^(Reply to leave feedback)")
-
-				with open ("comments_replied_to.txt", "a") as f:
-					f.write(comment.id + "\n")
-				count = count + 1
-				print_output("Deca Support comment has been left.")
-
-
-
-			matcher = re.search("(?i)(!bannedposts)",comment.body)
-			if(matcher != None and comment.id not in comments_replied_to):
-				comment.reply("The list of banned posts for the subreddit can be found here: https://www.reddit.com/r/RotMG/wiki/bannedposts \n \n" +
-					"--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +
-					" and this action was performed automatically) ^| ^(Version: " + version + ") ^| ^(Reply to leave feedback)")
-
-				with open ("comments_replied_to.txt", "a") as f:
-					f.write(comment.id + "\n")
-				count = count + 1
-				print_output("Deca Support comment has been left.")
-
-
-			matcher = re.search("(?i)(!bluenoser)",comment.body)
-			if(matcher != None and comment.id not in comments_replied_to):
-				comment.reply("Blunosers guide, an incredibly helpful resource for new players, can be found here: http://bluenosersguide.weebly.com/ \n \n" +
-					"--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +
-					" and this action was performed automatically) ^| ^(Version: " + version + ") ^| ^(Reply to leave feedback)")
-
-				with open ("comments_replied_to.txt", "a") as f:
-					f.write(comment.id + "\n")
-				count = count + 1
-				print_output("Bluenosers guide comment has been left.")
-
-
-			matcher = re.search("(?i)(!discord)",comment.body)
-			if(matcher != None and comment.id not in comments_replied_to):
-				comment.reply("Here are links to all the discords: \n\nPitchOTMG: https://discord.gg/s5c8rKw \n\n" +
-					"Official Subreddit Discord: https://discord.gg/rotmg \n\nPublic Lost Halls discord: https://discord.gg/yWASJqd \n\n"+
-					"Fame Train Discord: https://discord.gg/sXRRQth \n\n--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +
-					"and this action was performed automatically) ^| ^(Version: " + version + ") ^| ^(Reply to leave feedback)")
-
-				with open ("comments_replied_to.txt", "a") as f:
-					f.write(comment.id + "\n")
-				count = count + 1
-				print_output("All discords comment has been left.")
-
-			matcher = re.search("(?i)(!help|!commands)",comment.body)
-			if(matcher != None and comment.id not in comments_replied_to):
-				comment.reply("Here are links to all the discords: \n\nPitchOTMG: https://discord.gg/s5c8rKw \n\n" +
-					"Official Subreddit Discord: https://discord.gg/rotmg \n\nPublic Lost Halls discord: https://discord.gg/yWASJqd \n\n"+
-					"Fame Train Discord: https://discord.gg/sXRRQth \n\n--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +
-					"and this action was performed automatically) ^| ^(Version: " + version + ") ^| ^(Reply to leave feedback)")
-
-				with open ("comments_replied_to.txt", "a") as f:
-					f.write(comment.id + "\n")
-				count = count + 1
-				print_output("All discords comment has been left.")
-
-
-
-
+                        matches = [['"(?i)(!train|!fametrain)"', '"The Fame Train, previously located on the server EUN2, now moves around to whichever realm " + \n\t\t\t\t\t\t"provides the best fpm (fame per minute). Their current location can be found in the #click-here-for-train channel of their discord: "+\n\t\t\t\t\t\t"https://discord.gg/sXRRQth.\n \n" +\n\t\t\t\t\t\t"--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +\n\t\t\t\t\t\t" and this action was performed automatically) ^| ^(Version: " + version + ") ^| ^(Reply to leave feedback)")', '"--------------- \n \nFame Train discord comment has been left.\n ---------------")\n\n\n\n\n\n\t\t\tmatcher = re.search("(?i)(!LH|!Lost Halls|!lost halls)"'], ['"(?i)(!pitch|!PitchOTMG|!POTMG)"', '"Pitch is a shatters subscription system where you pay two life a week to gain access to shatters bought with that life." +\n\t\t\t\t\t"\n \n The Pitch discord can be found here: https://discord.gg/s5c8rKw \n \n" +\n\t\t\t\t\t"--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +\n\t\t\t\t\t" and this action was performed automatically) ^| ^(Version: " + version + ") ^| ^(Reply to leave feedback)")', '"Pitch discord comment has been left.")'], ['"(?i)(!r/rotmg|!rotmg|!r-rotmg)"', '"The official r/rotmg discord can be found here: https://discord.gg/rotmg \n \n" +\n\t\t\t\t\t"--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +\n\t\t\t\t\t" and this action was performed automatically) ^| ^(Version: " + version + ") ^) ^| ^(Reply to leave feedback)")', '"r/rotmg discord comment has been left.")'], ['"(?i)(!support|!supportlink|!Deca Support)"', '"Deca support - used for unban requests, hacker reports, and a host of other things - can be found here: "+\n\t\t\t\t\t"http://decagames.desk.com/customer/portal/emails/new \n \n" +\n\t\t\t\t\t"--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +\n\t\t\t\t\t" and this action was performed automatically) ^| ^(Version: " + version + " ^| ^(Reply to leave feedback)")', '"Deca Support comment has been left.")'], ['"(?i)(!bannedposts)"', '"The list of banned posts for the subreddit can be found here: https://www.reddit.com/r/RotMG/wiki/bannedposts \n \n" +\n\t\t\t\t\t"--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +\n\t\t\t\t\t" and this action was performed automatically) ^| ^(Version: " + version + ") ^| ^(Reply to leave feedback)")', '"Deca Support comment has been left.")'], ['"(?i)(!bluenoser)"', '"Blunosers guide, an incredibly helpful resource for new players, can be found here: http://bluenosersguide.weebly.com/ \n \n" +\n\t\t\t\t\t"--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +\n\t\t\t\t\t" and this action was performed automatically) ^| ^(Version: " + version + ") ^| ^(Reply to leave feedback)")', '"Bluenosers guide comment has been left.")'], ['"(?i)(!discord)"', '"Here are links to all the discords: \n\nPitchOTMG: https://discord.gg/s5c8rKw \n\n" +\n\t\t\t\t\t"Official Subreddit Discord: https://discord.gg/rotmg \n\nPublic Lost Halls discord: https://discord.gg/yWASJqd \n\n"+\n\t\t\t\t\t"Fame Train Discord: https://discord.gg/sXRRQth \n\n--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +\n\t\t\t\t\t"and this action was performed automatically) ^| ^(Version: " + version + ") ^| ^(Reply to leave feedback)")', '"All discords comment has been left.")'], ['"(?i)(!help|!commands)"', '"Here are links to all the discords: \n\nPitchOTMG: https://discord.gg/s5c8rKw \n\n" +\n\t\t\t\t\t"Official Subreddit Discord: https://discord.gg/rotmg \n\nPublic Lost Halls discord: https://discord.gg/yWASJqd \n\n"+\n\t\t\t\t\t"Fame Train Discord: https://discord.gg/sXRRQth \n\n--- \n \n ^(My creator is Tybug2) ^| ^(I am a bot," +\n\t\t\t\t\t"and this action was performed automatically) ^| ^(Version: " + version + ") ^| ^(Reply to leave feedback)")', '"All discords comment has been left.")']]
+                        for match, reply, output in matches:
+                                matcher = re.search(match,comment.body)
+                                if(matcher != None and comment.id not in comments_replied_to):
+                                        comment.reply(reply)
+                                        with open ("comments_replied_to.txt", "a") as f: 			# a = writing the file
+                                                f.write(comment.id + "\n")
+                                        count = count + 1
+                                        print_output(output)
 		except: 
 			time.sleep(60)
 
